@@ -5,20 +5,17 @@ count=0
 k=0
 name=str(input("Enter your full name: "))
 
-for i in range(0,len(name)):
-   if name[i]==' ':
-       count+=1
-       if count>1:
-           middle_name=name[k:i]
-           k=i+1
-           print("The middle name is:",middle_name)
-       else:
-           k = i+1
-           first_name=name[0:i]
-           print("The first name is:",first_name)
+s=name.split(" ")
 
-last_name=name[k:len(name)]
-print("The last name is:", last_name)
+print("The first name is:",s[0])
+if len(s)==3:
+    print("The middle name is:",s[1])
+    print("The last name is:", s[2])
+else:
+    print("The last name is:", s[1])
+
+
+
 
 
 
